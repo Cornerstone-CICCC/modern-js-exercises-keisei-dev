@@ -36,5 +36,4 @@ const whereCanIPark = function (spots, vehicle) {
   return false;
 };
 
-// この一行が重要
 module.exports = whereCanIPark;
