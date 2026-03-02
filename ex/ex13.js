@@ -9,20 +9,18 @@ Create a function named talkingCalendar that takes in a date string with the for
 */
 
 const talkingCalendar = function (date) {
-  // 1. 文字列を分割する
+  
   const parts = date.split('/');
   const year = parts[0];
   const monthInt = parseInt(parts[1]);
   const dayInt = parseInt(parts[2]);
 
-  // 2. 月の名前を配列で管理
   const months = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
   const monthName = months[monthInt - 1];
 
-  // 3. 日に付ける序数（st, nd, rd, th）を決めるロジック
   let suffix = "th";
   if (dayInt === 1 || dayInt === 21 || dayInt === 31) {
     suffix = "st";
@@ -32,7 +30,6 @@ const talkingCalendar = function (date) {
     suffix = "rd";
   }
 
-  // 4. フォーマットに合わせて組み立てる
   return `${monthName} ${dayInt}${suffix}, ${year}`;
 };
 
