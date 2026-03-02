@@ -12,20 +12,17 @@ const repeatNumbers = function (data) {
   let results = [];
 
   for (let i = 0; i < data.length; i++) {
-    const value = data[i][0];  // 繰り返したい数字
-    const count = data[i][1];  // 繰り返す回数
+    const value = data[i][0];  
+    const count = data[i][1];  
     let repeatedString = "";
 
-    // 指定された回数分、文字列として連結
     for (let j = 0; j < count; j++) {
       repeatedString += value;
     }
 
-    // 各セットの結果を配列に格納
     results.push(repeatedString);
   }
 
-  // 配列の要素を ", " でつないで一つの文字列にする
   return results.join(", ");
 };
 
