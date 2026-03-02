@@ -22,7 +22,6 @@ This one is a doozy! We might want to start by creating a helper function called
 
 const chooseRecipe = function (bakeryA, bakeryB, recipes) {
   
-  // ヘルパー関数: ベーカリーの在庫にレシピの材料が含まれているかチェックする
   const ingredientCheck = function (bakery, ingredients) {
     for (let ingredient of ingredients) {
       if (bakery.includes(ingredient)) {
@@ -32,10 +31,8 @@ const chooseRecipe = function (bakeryA, bakeryB, recipes) {
     return false;
   };
 
-  // 各レシピを一つずつ確認する
   for (let recipe of recipes) {
-    // ベーカリーAがレシピの材料の「どれか」を持っており、
-    // かつベーカリーBもレシピの材料の「どれか」を持っている場合
+    
     if (ingredientCheck(bakeryA, recipe.ingredients) && 
         ingredientCheck(bakeryB, recipe.ingredients)) {
       return recipe.name;
