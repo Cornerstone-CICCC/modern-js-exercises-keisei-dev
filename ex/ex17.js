@@ -24,19 +24,14 @@ Create a function named urlDecode that will receive a URL encoded string, and re
 const urlDecode = function (text) {
   const result = {};
   
-  // 1. & で分割して各ペアの配列にする
-  // 例: ["city=Vancouver", "weather=lots%20of%20rain"]
   const pairs = text.split("&");
 
   for (const pair of pairs) {
-    // 2. = で分割してキーと値に分ける
+    
     const [key, value] = pair.split("=");
 
-    // 3. %20 を正規表現を使ってすべてのスペース（" "）に置換する
-    // /%20/g の 'g' は global フラグで、見つかったものすべてを置換します
     const decodedValue = value.replace(/%20/g, " ");
 
-    // 4. 結果オブジェクトに格納
     result[key] = decodedValue;
   }
 
