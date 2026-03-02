@@ -16,22 +16,19 @@ For more information on casing styles, read Wikipedia's Special Case Styles for 
 */
 
 const makeCaze = function (input, caze) {
-  // スタイルを配列に統一（単一文字列でも配列として扱う）
+  
   let styles = Array.isArray(caze) ? caze : [caze];
 
-  // 優先順位の定義
   const priority = {
     camel: 1, pascal: 1, snake: 1, kebab: 1, title: 1,
     vowel: 2, consonant: 2,
     upper: 3, lower: 3
   };
 
-  // 優先順位に従ってスタイルをソート
   styles.sort((a, b) => priority[a] - priority[b]);
 
   let currentString = input;
 
-  // 各スタイルを順番に適用
   styles.forEach(style => {
     switch (style) {
       case "camel":
