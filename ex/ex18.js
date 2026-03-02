@@ -23,20 +23,17 @@ Create a function named squareCode that will receive a message, and return the s
 */
 
 const squareCode = function (message) {
-  // 1. スペースを取り除いた文字列を作成
+  
   const cleanMessage = message.split(" ").join("");
   const len = cleanMessage.length;
 
-  // 2. 列の数を計算（平方根の切り上げ）
   const columns = Math.ceil(Math.sqrt(len));
 
   let result = [];
 
-  // 3. 列ごとに文字を拾う
   for (let col = 0; col < columns; col++) {
     let columnString = "";
     
-    // col番目の文字から始まり、columns（列数）飛ばしで文字を拾うと「縦読み」になる
     for (let i = col; i < len; i += columns) {
       columnString += cleanMessage[i];
     }
@@ -44,7 +41,6 @@ const squareCode = function (message) {
     result.push(columnString);
   }
 
-  // 4. 各列の文字列をスペースでつなげて返す
   return result.join(" ");
 };
 
