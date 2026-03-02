@@ -9,16 +9,16 @@ Create a function named camelCase that will convert a string to camel case, and 
 */
 
 const camelCase = function (input) {
-  // 1. スペースで分割して単語の配列を作る
+  
   const words = input.split(" ");
   let result = "";
 
   for (let i = 0; i < words.length; i++) {
     if (i === 0) {
-      // 最初の単語はすべて小文字
+      
       result += words[i].toLowerCase();
     } else {
-      // 2番目以降の単語：先頭を大文字 + 残りを小文字
+      
       result += words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
     }
   }
