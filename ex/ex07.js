@@ -11,17 +11,14 @@ Not sure where to get started? It might be useful to start by creating a variabl
 const checkAir = function (samples, threshold) {
   let dirtyCount = 0;
 
-  // 1. 全サンプルをループして、"dirty"の数を数える
   for (const sample of samples) {
     if (sample === "dirty") {
       dirtyCount++;
     }
   }
 
-  // 2. 汚染率を計算する (汚れた数 / 全体数)
   const pollutionLevel = dirtyCount / samples.length;
 
-  // 3. しきい値と比較して結果を返す
   if (pollutionLevel > threshold) {
     return "Polluted";
   } else {
@@ -29,5 +26,4 @@ const checkAir = function (samples, threshold) {
   }
 };
 
-// Jestなどのテスト環境で必要なエクスポート
 module.exports = checkAir;
