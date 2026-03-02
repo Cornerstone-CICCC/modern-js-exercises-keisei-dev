@@ -96,5 +96,4 @@ const queenThreat = function(generatedBoard) {
   return isSameRow || isSameCol || isDiagonal;
 };
 
-// 修正ポイント：複数の関数をオブジェクトとしてエクスポートする
 module.exports = { generateBoard, queenThreat };
