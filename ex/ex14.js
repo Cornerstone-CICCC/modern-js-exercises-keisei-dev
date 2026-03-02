@@ -30,8 +30,8 @@ const calculateChange = function (total, cash) {
     { name: "twentyDollar", value: 2000 },
     { name: "tenDollar",    value: 1000 },
     { name: "fiveDollar",   value: 500 },
-    { name: "toonie",       value: 200 }, // twoDollarから変更
-    { name: "loonie",       value: 100 }, // oneDollarから変更
+    { name: "toonie",       value: 200 }, 
+    { name: "loonie",       value: 100 }, 
     { name: "quarter",      value: 25 },
     { name: "dime",         value: 10 },
     { name: "nickel",       value: 5 },
